@@ -30,6 +30,24 @@ export async function getWorkersStatus(env: Env) {
         errorRate: '0.05%',
         p99LatencyMs: 52,
         lastDeployed: '2025-09-24T22:01:00Z'
+      },
+      {
+        name: 'database-pool-manager',
+        status: 'active',
+        requests24h: 1440,
+        errors24h: 0,
+        errorRate: '0.00%',
+        p99LatencyMs: 125,
+        lastDeployed: '2025-10-01T20:00:00Z'
+      },
+      {
+        name: 'integra-d1-worker',
+        status: 'active',
+        requests24h: 32567,
+        errors24h: 8,
+        errorRate: '0.02%',
+        p99LatencyMs: 34,
+        lastDeployed: '2025-10-01T18:30:00Z'
       }
     ]
   };
