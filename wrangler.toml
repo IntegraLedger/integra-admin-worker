@@ -1,0 +1,31 @@
+name = "integra-admin-worker"
+main = "src/index.ts"
+compatibility_date = "2024-10-01"
+compatibility_flags = ["nodejs_compat"]
+
+# KV Namespaces
+[[kv_namespaces]]
+binding = "ADMIN_SESSIONS"
+id = "2df6ad99e50d4ee0b95fb501f9051cc7"
+
+[[kv_namespaces]]
+binding = "ADMIN_CACHE"
+id = "3a4495192e254661bc4fbce10e0f381d"
+
+# Environment variables
+[vars]
+ENVIRONMENT = "production"
+ADMIN_PASSWORD_PLAINTEXT = "2917Mason"
+
+# Secrets (set via wrangler secret put)
+# JWT_SECRET - JWT signing secret
+# CLOUDFLARE_API_TOKEN - Cloudflare API access
+# CLOUDFLARE_ACCOUNT_ID - Account ID
+# DO_API_TOKEN - DigitalOcean API token
+# RABBITMQ_URL - RabbitMQ connection URL
+# RABBITMQ_USER - RabbitMQ username
+# RABBITMQ_PASS - RabbitMQ password
+
+[env.development]
+name = "integra-admin-worker-dev"
+vars = { ENVIRONMENT = "development" }
